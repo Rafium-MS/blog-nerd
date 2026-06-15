@@ -407,6 +407,26 @@ h1 {
 
 
 /* Complemento opcional para melhorar o visual dos posts */
+.post-figure {
+  margin: 1.6rem 0 0;
+}
+
+.post-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--shadow);
+}
+
+.post-figure figcaption {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
 .post-article h2 {
   margin-top: 2rem;
   font-family: "Bebas Neue", Impact, sans-serif;
