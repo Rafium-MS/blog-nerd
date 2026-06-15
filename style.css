@@ -354,59 +354,6 @@ h1 {
   margin: 0;
 }
 
-/* ---- Movimento e interação dos cards ---- */
-.headline-card,
-.news-card,
-.section-grid article {
-  /* transform = elevação (--lift) + tilt 3D (--rx/--ry, definidos via JS) */
-  transform: perspective(900px) translateY(var(--lift, 0))
-    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-  transition: transform 0.25s ease, box-shadow 0.25s ease, translate 0.6s ease,
-    opacity 0.6s ease;
-  will-change: transform;
-}
-
-.is-clickable {
-  cursor: pointer;
-}
-
-.is-clickable:focus-visible {
-  outline: 3px solid var(--toxic-dark);
-  outline-offset: 3px;
-}
-
-/* Elevação no hover/foco (via variável, sem brigar com o tilt) */
-.headline-card:hover,
-.news-card:hover,
-.section-grid article:hover,
-.is-clickable:focus-visible {
-  --lift: -6px;
-  box-shadow: 10px 12px 0 var(--shadow);
-}
-
-/* Revelar ao rolar (usa a propriedade independente `translate`) */
-.reveal {
-  opacity: 0;
-  translate: 0 22px;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  translate: 0 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .headline-card,
-  .news-card,
-  .section-grid article,
-  .reveal {
-    transition: none;
-    transform: none;
-    translate: none;
-    opacity: 1;
-  }
-}
-
 @media (max-width: 860px) {
   .nav-bar,
   .hero,
@@ -455,5 +402,139 @@ h1 {
 
   h1 {
     font-size: clamp(4rem, 23vw, 5.3rem);
+  }
+}
+
+
+/* Complemento opcional para melhorar o visual dos posts */
+.post-article h2 {
+  margin-top: 2rem;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.post-meta {
+  margin: 1rem 0 1.2rem;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.post-divider {
+  border: 0;
+  border-top: 4px double var(--ink);
+  margin: 2rem 0;
+}
+
+.post-article blockquote {
+  margin: 2rem 0;
+  border-left: 6px solid var(--toxic-dark);
+  background: rgba(167, 255, 47, 0.13);
+  padding: 1rem 1.2rem;
+  color: var(--coal);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.post-box {
+  margin-top: 2rem;
+  border: 2px solid var(--ink);
+  background: linear-gradient(135deg, rgba(167, 255, 47, 0.2), rgba(239, 228, 200, 0.9));
+  padding: 1.2rem;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.post-box h3 {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.post-box ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+}
+
+
+
+/* Cards reais da capa */
+.post-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.55rem;
+  margin-bottom: 0.9rem;
+  color: var(--toxic-dark);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.post-card-meta time {
+  color: var(--muted);
+}
+
+.post-card .read-more,
+.featured-post .read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  margin-top: 0.85rem;
+  border: 2px solid var(--ink);
+  background: var(--toxic);
+  padding: 0.55rem 0.75rem;
+  color: var(--ink);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.post-card .read-more:hover,
+.featured-post .read-more:hover,
+.button:hover {
+  transform: translate(-1px, -1px);
+}
+
+.about-page .topic-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.about-page .topic-list article {
+  border: 2px solid var(--ink);
+  background: rgba(239, 228, 200, 0.72);
+  padding: 1rem;
+}
+
+.about-page .topic-list h3 {
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.about-page .topic-list p {
+  margin-bottom: 0;
+  color: var(--coal);
+  line-height: 1.55;
+}
+
+@media (max-width: 860px) {
+  .about-page .topic-list {
+    grid-template-columns: 1fr;
   }
 }
