@@ -354,6 +354,59 @@ h1 {
   margin: 0;
 }
 
+/* ---- Movimento e interação dos cards ---- */
+.headline-card,
+.news-card,
+.section-grid article {
+  /* transform = elevação (--lift) + tilt 3D (--rx/--ry, definidos via JS) */
+  transform: perspective(900px) translateY(var(--lift, 0))
+    rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 0.25s ease, box-shadow 0.25s ease, translate 0.6s ease,
+    opacity 0.6s ease;
+  will-change: transform;
+}
+
+.is-clickable {
+  cursor: pointer;
+}
+
+.is-clickable:focus-visible {
+  outline: 3px solid var(--toxic-dark);
+  outline-offset: 3px;
+}
+
+/* Elevação no hover/foco (via variável, sem brigar com o tilt) */
+.headline-card:hover,
+.news-card:hover,
+.section-grid article:hover,
+.is-clickable:focus-visible {
+  --lift: -6px;
+  box-shadow: 10px 12px 0 var(--shadow);
+}
+
+/* Revelar ao rolar (usa a propriedade independente `translate`) */
+.reveal {
+  opacity: 0;
+  translate: 0 22px;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .headline-card,
+  .news-card,
+  .section-grid article,
+  .reveal {
+    transition: none;
+    transform: none;
+    translate: none;
+    opacity: 1;
+  }
+}
+
 @media (max-width: 860px) {
   .nav-bar,
   .hero,
