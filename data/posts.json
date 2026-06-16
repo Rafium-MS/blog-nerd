@@ -1,11 +1,18 @@
 [
   {
+    "title": "Do trailer-ansiedade ao Bazingueiro: como o nerd perdeu a profundidade",
+    "section": "Arquivo Mutante",
+    "date": "2026-06-16",
+    "excerpt": "**Vivemos a era da ansiedade cinematográfica. Não bastam mais os trailers; precisamos de teasers, teasers de teasers e análises frame a frame antes mesmo de o filme estrear. O resultado? Uma geração de espectadores que consome migalhas de cultura pop, decora referências vazias e confunde saber o nome de um herói com entender sua jornada. Eis o paradoxo: quanto mais conteúdo sobre um filme consumimos antes de vê-lo, menos sobra para ser verdadeiramente absorvido. E no centro dessa epidemia de superficialidade, surge uma criatura antes inexistente: o Bazingueiro — o falso nerd que nunca leu um quadrinho, mas jura que entende tudo sobre o universo geek.**",
+    "url": "posts/do-trailer-ansiedade-ao-bazingueiro-como-o-nerd-perdeu-a-profundidade.html",
+    "card": "featured"
+  },
+  {
     "title": "O sinal verde no fim do multiverso",
     "section": "Manchete Radioativa",
     "date": "2026-06-15",
     "excerpt": "A primeira edicao abre a redacao e apresenta o manifesto da Gazeta: cultura pop, nostalgia, teorias e projetos nerds tratados como noticias vindas de um universo instavel.",
-    "url": "posts/primeira-edicao.html",
-    "card": "featured"
+    "url": "posts/primeira-edicao.html"
   },
   {
     "title": "Por que os anos 90 ainda parecem o menu secreto da cultura geek?",
