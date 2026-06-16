@@ -1,0 +1,32 @@
+[
+  {
+    "title": "O sinal verde no fim do multiverso",
+    "section": "Manchete Radioativa",
+    "date": "2026-06-15",
+    "excerpt": "A primeira edicao abre a redacao e apresenta o manifesto da Gazeta: cultura pop, nostalgia, teorias e projetos nerds tratados como noticias vindas de um universo instavel.",
+    "url": "posts/primeira-edicao.html",
+    "card": "featured"
+  },
+  {
+    "title": "Por que os anos 90 ainda parecem o menu secreto da cultura geek?",
+    "section": "Arquivo Mutante",
+    "date": "2026-06-18",
+    "excerpt": "Cartuchos, locadoras, animes na TV aberta e a estetica que nunca saiu do laboratorio.",
+    "url": "posts/anos-90-menu-secreto-cultura-geek.html"
+  },
+  {
+    "title": "Todo trailer precisa esconder uma conspiracao?",
+    "section": "Dossie Secreto",
+    "date": "2026-06-21",
+    "excerpt": "Como easter eggs viraram combustivel para teorias, cortes quadro a quadro e ansiedade coletiva.",
+    "url": "posts/trailers-e-conspiracoes-geek.html",
+    "tone": "alert"
+  },
+  {
+    "title": "3 obras para ver antes do proximo apocalipse pop",
+    "section": "Classificados do Multiverso",
+    "date": "2026-06-24",
+    "excerpt": "Uma lista curta para quem quer aventura, nostalgia e radiacao narrativa controlada.",
+    "url": "posts/obras-antes-do-apocalipse-pop.html"
+  }
+]

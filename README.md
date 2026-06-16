@@ -9,8 +9,31 @@ index.html
 style.css
 posts/
 assets/img/
+data/posts.json
+scripts/new-post.js
 README.md
 ```
+
+## Criar novos posts
+
+Use o gerador para criar o HTML do post e atualizar o indice da capa:
+
+```bash
+npm run new-post -- "Titulo do novo post"
+```
+
+Opcoes uteis:
+
+```bash
+npm run new-post -- "Titulo do novo post" --section="Arquivo Mutante" --excerpt="Resumo curto" --date=2026-06-16
+```
+
+O comando cria um arquivo em `posts/` e adiciona a entrada correspondente em
+`data/posts.json`. A capa (`index.html`) le esse JSON para montar a lista de
+posts automaticamente.
+
+Para testar localmente, rode um servidor estatico na raiz do projeto. Abrir o
+`index.html` direto pelo navegador pode bloquear a leitura do JSON.
 
 ## Conceito
 

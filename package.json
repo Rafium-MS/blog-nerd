@@ -4,6 +4,7 @@
   "description": "Blog nerd estático preparado para GitHub Pages.",
   "main": "main.js",
   "scripts": {
+    "new-post": "node scripts/new-post.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
